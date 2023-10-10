@@ -1,13 +1,23 @@
 #!/bin/sh
 
+if which rofi &>/dev/null; then
+	prompter="rofi -dmenu"
+elif which dmenu &>/dev/null; then
+	prompter="dmenu"
+else
+	notify-send "i3exitconf requires dmenu or rofi be installed"
+	echo "i3exitconf requires dmenu or rofi be installed"
+	exit 1
+fi
+
 prompt="Are you sure you want to exit i3?"
 
 options="Cancel\nExit i3\nReboot\nShutdown"
 
-choice="$( printf "%b\n" "$options" | rofi -dmenu -i -p "$prompt" )"
+choice="$( printf "%b\n" "$options" | $prompter -i -p "$prompt" )"
 
 case $choice in
-	Cancel)
+	"Cancel")
 		;;
 	"Exit i3")
 		i3-msg exit
