@@ -1,0 +1,21 @@
+#!/bin/sh
+
+prompt="Are you sure you want to exit i3?"
+
+options="Cancel\nExit i3\nReboot\nShutdown"
+
+choice="$( printf "%b\n" "$options" | rofi -dmenu -i -p "$prompt" )"
+
+case $choice in
+	Cancel)
+		;;
+	"Exit i3")
+		i3-msg exit
+		;;
+	"Reboot")
+		systemctl reboot
+		;;
+	"Shutdown")
+		systemctl poweroff
+		;;
+esac
