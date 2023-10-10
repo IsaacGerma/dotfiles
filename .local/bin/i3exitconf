@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if which rofi &>/dev/null; then
+if which rofi >/dev/null; then
 	prompter="rofi -dmenu"
-elif which dmenu &>/dev/null; then
+elif which dmenu >/dev/null; then
 	prompter="dmenu"
 else
 	notify-send "i3exitconf requires dmenu or rofi be installed"
