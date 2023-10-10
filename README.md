@@ -17,6 +17,9 @@ My dotfiles
 * RSS feed reader - newsboat
 * Scripts - some borrowed, some original
 
+# Other things
+* vim plugins with [vim-plug](https://github.com/junegunn/vim-plug)
+
 # Todo
 * clean up i3 config, possibly split into multiple files
 
