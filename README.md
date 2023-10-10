@@ -17,6 +17,9 @@ My dotfiles
 * RSS feed reader - newsboat
 * Scripts - some borrowed, some original
 
+# Todo
+* clean up i3 config, possibly split into multiple files
+
 # Credits
 Many scripts and config files are borrowed from :
 * [Tatsumoto Ren](https://github.com/tatsumoto-ren/dotfiles)
