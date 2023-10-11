@@ -14,6 +14,7 @@ export EDITOR=nvim
 export TERMINAL=alacritty
 export BROWSER=librewolf
 #export PAGER=nvimpager
+#export MENU="dmenu"
 
 export XDG_DATA_HOME="${XDG_DATA_HOME}$HOME/.local/share"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME}$HOME/.config"
