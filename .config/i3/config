@@ -222,9 +222,9 @@ bindsym $mod+Shift+Insert	exec --no-startup-id bookmarkctl pop
 bindsym $mod+Pause		exec --no-startup-id showclip
 
 # binds for media stuffs
-bindsym XF86AudioPlay			exec --no-startup-id mpc toggle
-bindsym XF86AudioPrev			exec --no-startup-id mpc prev
-bindsym XF86AudioNext			exec --no-startup-id mpc next
+bindsym XF86AudioPlay			exec --no-startup-id mpc toggle && $refresh_i3status
+bindsym XF86AudioPrev			exec --no-startup-id mpc prev && $refresh_i3status
+bindsym XF86AudioNext			exec --no-startup-id mpc next && $refresh_i3status
 
 # launch ytfzf
 bindsym $mod+shift+y		exec --no-startup-id ytfzf -D
@@ -232,6 +232,9 @@ bindsym $mod+Tab		exec --no-startup-id rofi -show
 
 # lock screen
 bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock
+
+# launch calcurse
+bindsym $mod+Mod1+c		exec --no-startup-id i3-sensible-terminal -e calcurse
 
 ##################################
 ### Misc #########################

@@ -27,6 +27,12 @@ command=printf "Vol:%b\n" $(pamixer --get-volume-human)
 interval=10
 signal=10
 
+# Thank you, tatsumoto
+[sb-music]
+interval=10
+signal=10
+markup=pango
+
 [battery]
 command=[[ -d /sys/class/power_supply/BAT0/ ]] && printf "BAT0:%b%% %.3s\n" $(cat /sys/class/power_supply/BAT0/capacity) $(cat /sys/class/power_supply/BAT0/status)
 interval=10
