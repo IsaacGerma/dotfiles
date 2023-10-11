@@ -23,7 +23,7 @@ command=~/.local/bin/statusbar/$BLOCK_NAME
 #interval=once
 
 [volume]
-command=pamixer --get-volume-human
+command=printf "Volume:%b\n" $(pamixer --get-volume-human)
 interval=10
 signal=10
 
