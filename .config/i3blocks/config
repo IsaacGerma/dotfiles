@@ -32,7 +32,7 @@ command=[[ -d /sys/class/power_supply/BAT0/ ]] && printf "BAT0:%b%% %.3s\n" $(ca
 interval=10
 
 [brightness]
-command=printf [[ -f /usr/bin/xbacklight ]] && "Light:%.0f%%\n" $(xbacklight -get)
+command=[[ -f /usr/bin/light ]] && printf "Light:%.0f%%\n" $(light)
 interval=10
 signal=10
 
