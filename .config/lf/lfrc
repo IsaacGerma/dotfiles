@@ -7,3 +7,11 @@ set cleaner ctpvclear
 set preview true
 set hidden false
 set drawbox true
+
+
+cmd open ${{
+	case $(file --mime-type "$f" -bL) in
+		text/*) $EDITOR "$f";;
+		*) setsid -f xdg-open "$f" ;;
+	esac
+}}
