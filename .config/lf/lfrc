@@ -1,0 +1,9 @@
+# set up previewer, provided by ctpv-git from the AUR
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+set preview true
+set hidden false
+set drawbox true
