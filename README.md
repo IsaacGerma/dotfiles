@@ -22,6 +22,7 @@ My dotfiles
 
 # Todo
 * clean up i3 config, possibly split into multiple files
+* setup such that preferred script menu (ie dmenu or rofi) can be changed system-wide. This could probably use environment variables in .*profile
 
 # Credits
 Many scripts and config files are borrowed from :
