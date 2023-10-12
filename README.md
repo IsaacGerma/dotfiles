@@ -7,6 +7,7 @@ My dotfiles
 * Shell - bash
 * Terminal - Alacritty, sometimes others
 * Text editor - neovim
+* Vim plugins - vim-plug
 * WM - i3
 * Status Bar - i3blocks
 * Launcher - Rofi
@@ -17,8 +18,6 @@ My dotfiles
 * RSS feed reader - newsboat
 * Scripts - some borrowed, some original
 
-# Other things
-* vim plugins with [vim-plug](https://github.com/junegunn/vim-plug)
 
 # Todo
 * clean up i3 config, possibly split into multiple files
