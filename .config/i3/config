@@ -236,6 +236,10 @@ bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock
 # launch calcurse
 bindsym $mod+Mod1+c		exec --no-startup-id i3-sensible-terminal -e calcurse
 
+# Screenshot
+bindsym --release Print		exec --no-startup-id maimfull
+bindsym shift+Print		exec --no-startup-id maimpick
+
 ##################################
 ### Misc #########################
 ##################################

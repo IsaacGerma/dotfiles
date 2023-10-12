@@ -1,0 +1,5 @@
+#!/bin/sh
+
+d=$(date '+%Y%m%d-%H%M%S')
+
+maim -s ~/Pictures/screenshots/$d.png && notify-send -i ~/Pictures/screenshots/$d.png "Screenshot saved"
