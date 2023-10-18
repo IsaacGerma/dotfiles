@@ -240,6 +240,9 @@ bindsym $mod+Mod1+c		exec --no-startup-id i3-sensible-terminal -e calcurse
 bindsym --release Print		exec --no-startup-id maimfull
 bindsym shift+Print		exec --no-startup-id maimpick
 
+# open todo list with vit
+bindsym $mod+shift+t		exec --no-startup-id i3-sensible-terminal -e vit
+
 ##################################
 ### Misc #########################
 ##################################
