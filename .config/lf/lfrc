@@ -12,6 +12,7 @@ set drawbox true
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
 		text/*) $EDITOR "$f";;
+		application/pdf) setsid -f zathura "$f";;
 		*) setsid -f xdg-open "$f" ;;
 	esac
 }}
