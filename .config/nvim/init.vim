@@ -11,6 +11,7 @@ call plug#begin()
 	"Plug 'valloric/youcompleteme'
 	"Plug 'jamessan/vim-gnupg'
 	Plug 'vimwiki/vimwiki'
+	Plug 'ying17zi/vim-live-latex-preview'
 
 call plug#end()
 
