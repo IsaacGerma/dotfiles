@@ -22,8 +22,8 @@ command=~/.local/bin/statusbar/$BLOCK_NAME
 #command=echo "Hello, $USER!"
 #interval=once
 
-[volume]
-command=printf "Vol:%b\n" $(pamixer --get-volume-human)
+[sb-volume]
+#command=printf "Vol:%b\n" $(pamixer --get-volume-human)
 interval=10
 signal=10
 
