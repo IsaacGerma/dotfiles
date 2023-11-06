@@ -22,3 +22,5 @@ map <C-l> <C-w>l
 
 nnoremap <C-n> :NERDTree<CR>
 
+let g:airline#extensions#wordcount#enabled = 1
+

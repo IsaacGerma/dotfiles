@@ -200,6 +200,7 @@ mode "resize" {
 }
 
 bindsym $mod+r			mode "resize"
+bindsym $mod+Mod1+0		gaps inner all set 0
 
 # launch browser
 bindsym $mod+shift+w		exec --no-startup-id $browser
