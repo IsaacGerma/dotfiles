@@ -1,0 +1,11 @@
+#!/bin/sh
+
+printf "Vol:%b\n" $(pamixer --get-volume-human)
+
+case $BLOCK_BUTTON in
+4) # scroll up, increase volume
+	pactl set-sink-volume @DEFAULT_SINK@ +5% ;;
+5) # scroll down, decrease volume
+	pactl set-sink-volume @DEFAULT_SINK@ -5% ;;
+esac
+
