@@ -3,7 +3,8 @@
 My dotfiles
 
 # Programs I Use
-* Distro - Arch Linux
+* Distro - Arch Linux, Gentoo
+    * I use multiple machines, one with Gentoo
 * Shell - bash
 * Terminal - Alacritty, sometimes others
 * Text editor - neovim
