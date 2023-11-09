@@ -15,4 +15,4 @@ alias xdg-ninja='xdg-ninja --skip-unsupported'
 #alias lf="lfrun"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias nvf='nvim $(find . | fzf)'
-alias c='nvim $(find ~/.config -type f | fzf)'
+alias c='nvim $(find ~/.config ~/.local/bin -type f | fzf)'

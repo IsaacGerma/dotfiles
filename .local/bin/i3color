@@ -1,0 +1,18 @@
+#!/bin/sh
+if which rofi >/dev/null; then
+	prompter="rofi -dmenu"
+elif which dmenu >/dev/null; then
+	prompter="dmenu"
+else
+	notify-send "i3color requires dmenu or rofi be installed"
+	echo "i3color requires dmenu or rofi be installed"
+	exit 1
+fi
+
+SOURCE_DIR=~/.config/i3/colors
+DEST_FILE=~/.config/i3/config.d/color
+CHOICE="$(find $SOURCE_DIR -type f | rofi -dmenu)"
+
+
+cat $CHOICE > $DEST_FILE
+i3-msg reload

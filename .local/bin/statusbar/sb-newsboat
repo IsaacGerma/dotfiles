@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+1) $TERMINAL -e newsboat
+esac
+
+echo "$(newsboat -x print-unread)"
+
+
+
