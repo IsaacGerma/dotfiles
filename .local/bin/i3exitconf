@@ -23,9 +23,9 @@ case $choice in
 		i3-msg exit
 		;;
 	"Reboot")
-		systemctl reboot
+		systemctl reboot || loginctl reboot
 		;;
 	"Shutdown")
-		systemctl poweroff
+		systemctl reboot || loginctl poweroff
 		;;
 esac
