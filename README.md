@@ -11,7 +11,7 @@ My dotfiles
    
    echo ".dotfiles" >> .gitignore
    
-   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.cfg
+   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.dotfiles
    
    alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
    
