@@ -4,7 +4,7 @@ My dotfiles
 
 # Using The Dotfiles
 1. Install your favorite minimalist distro (I use Arch and Gentoo)
-2. Run these commands:
+2. `cd` into your home directory and run these commands:
    
    ```
    alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -25,7 +25,7 @@ My dotfiles
 * Shell - bash
 * Terminal - Alacritty, sometimes others
 * Text editor - neovim
-* Vim plugins - vim-plug
+   * Vim plugins - vim-plug
 * WM - i3
 * Status Bar - i3blocks
 * Launcher - Rofi
