@@ -21,4 +21,5 @@ bar {
   }
         status_command i3blocks
 	tray_output primary
+	position top
 }
