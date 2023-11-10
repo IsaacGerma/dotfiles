@@ -12,7 +12,13 @@ export XMODIFIERS=@im=fcitx
 
 export EDITOR=nvim
 export TERMINAL=alacritty
-export BROWSER=librewolf
+
+if which librewolf >/dev/null; then
+	export BROWSER=librewolf
+elif which librewolf-bin >/dev/null; then
+	export BROWSER=librewolf-bin
+fi
+#export BROWSER=librewolf
 #export PAGER=nvimpager
 #export MENU="dmenu"
 
