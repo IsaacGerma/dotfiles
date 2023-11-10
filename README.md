@@ -7,13 +7,13 @@ My dotfiles
 2. `cd` into your home directory and run these commands:
    
    ```
-   alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
    
-   echo ".cfg" >> .gitignore
+   echo ".dotfiles" >> .gitignore
    
-   git clone --bare <git-repo-url> $HOME/.cfg
+   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.cfg
    
-   alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
    
    config checkout
    ```
