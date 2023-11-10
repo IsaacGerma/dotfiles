@@ -45,3 +45,6 @@ My dotfiles
 Many scripts and config files are borrowed from :
 * [Tatsumoto Ren](https://github.com/tatsumoto-ren/dotfiles)
 * [Luke Smith](https://github.com/LukeSmithxyz/voidrice)
+
+The process seen here for managing dotfiles was taken from Atlassian:
+* [How to Store Dotfiles - Atlassian](https://www.atlassian.com/git/tutorials/dotfiles)
