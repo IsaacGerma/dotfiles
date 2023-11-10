@@ -2,13 +2,30 @@
 
 My dotfiles
 
+# Using The Dotfiles
+1. Install your favorite minimalist distro (I use Arch and Gentoo)
+2. `cd` into your home directory and run these commands:
+   
+   ```
+   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+   
+   echo ".dotfiles" >> .gitignore
+   
+   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.cfg
+   
+   alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+   
+   config checkout
+   ```
+3. If `config checkout` fails, due to overwriting untracked files, move or delete those files and try it again.
+   
 # Programs I Use
 * Distro - Arch Linux, Gentoo
     * I use multiple machines, one with Gentoo
 * Shell - bash
 * Terminal - Alacritty, sometimes others
 * Text editor - neovim
-* Vim plugins - vim-plug
+   * Vim plugins - vim-plug
 * WM - i3
 * Status Bar - i3blocks
 * Launcher - Rofi
