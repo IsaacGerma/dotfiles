@@ -1,4 +1,4 @@
 #!/bin/sh
 
 [ -d ~/.config/i3/config.d ] || mkdir ~/.config/i3/config.d 
-[ -f ~/.config/i3/config.d/color ] || cp ~/.config/i3/colors/default ~/.config/i3/config.d/color
+[ -f ~/.config/i3/config.d/theme ] || cp ~/.config/i3/themes/default ~/.config/i3/config.d/theme

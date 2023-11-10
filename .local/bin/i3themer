@@ -9,8 +9,8 @@ else
 	exit 1
 fi
 
-SOURCE_DIR=~/.config/i3/colors
-DEST_FILE=~/.config/i3/config.d/color
+SOURCE_DIR=~/.config/i3/themes
+DEST_FILE=~/.config/i3/config.d/theme
 CHOICE="$(find $SOURCE_DIR -type f | rofi -dmenu)"
 
 

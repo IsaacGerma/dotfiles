@@ -254,7 +254,7 @@ bindsym $mod+shift+t		exec --no-startup-id i3-sensible-terminal -e vit
 ##################################
 
 exec --no-startup-id i3checkconfig
-include ~/.config/i3/config.d/color
+include ~/.config/i3/config.d/theme
 
 gaps inner 30
 gaps outer 00
