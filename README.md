@@ -11,7 +11,7 @@ My dotfiles
    
    echo ".dotfiles" >> .gitignore
    
-   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.cfg
+   git clone --bare https://github.com/IsaacGerma/dotfiles.git $HOME/.dotfiles
    
    alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
    
@@ -45,3 +45,6 @@ My dotfiles
 Many scripts and config files are borrowed from :
 * [Tatsumoto Ren](https://github.com/tatsumoto-ren/dotfiles)
 * [Luke Smith](https://github.com/LukeSmithxyz/voidrice)
+
+The process seen here for managing dotfiles was taken from Atlassian:
+* [How to Store Dotfiles - Atlassian](https://www.atlassian.com/git/tutorials/dotfiles)
