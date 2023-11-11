@@ -26,7 +26,7 @@ My dotfiles
 * Terminal - Alacritty, sometimes others
 * Text editor - neovim
    * Vim plugins - vim-plug
-* WM - i3
+* WM - i3, swayfx
 * Status Bar - i3blocks
 * Launcher - Rofi
 * File Manager - lf and pcmanfm
