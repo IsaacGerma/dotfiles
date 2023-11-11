@@ -230,13 +230,13 @@ bindsym XF86AudioPrev			exec --no-startup-id mpc prev && $refresh_i3status
 bindsym XF86AudioNext			exec --no-startup-id mpc next && $refresh_i3status
 
 # launch yomichan
-bindsym $mod+shift+y		exec --no-startup-id $browser moz-extension://a6d528c5-1491-4d44-bce3-7137df6a299b/search.html
+#bindsym $mod+shift+y		exec --no-startup-id $browser moz-extension://a6d528c5-1491-4d44-bce3-7137df6a299b/search.html
 
 # the classic mod+tab for switching windows
 bindsym $mod+Tab		exec --no-startup-id rofi -show
 
 # lock screen
-bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock
+bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock || swaylock
 
 # launch calcurse
 bindsym $mod+Mod1+c		exec --no-startup-id i3-sensible-terminal -e calcurse
@@ -257,6 +257,15 @@ include ~/.config/i3/config.d/theme
 
 gaps inner 30
 gaps outer 00
+
+for_window [app_id="Alacritty"] opacity set 0.9
+for_window [app_id="Alacritty"] dim_inactive 0.2
+
+#blur enable
+#blur_xray enable
+#blur_passes 0
+#blur_radius 0
+
 
 
 
