@@ -1,0 +1,23 @@
+auto-reload yes
+
+browser "setsid -f xdg-open"
+macro m set browser "mpv" ; open-in-browser ; set browser xdg-open
+macro y set browser "yt-dlp" ; open-in-browser ; set browser xdg-open
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key l open
+bind-key h quit
+
+
+highlight all "---.*---" yellow
+highlight feedlist ".*(0/0))" black
+
+
+notify-beep yes
+notify-program "notify-send"
+notify-always no
