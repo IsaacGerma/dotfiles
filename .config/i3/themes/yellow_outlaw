@@ -20,6 +20,6 @@ bar {
     binding_mode       #2F343A #900000 #FFFFFF
   }
         status_command i3blocks
-	tray_output primary
+	#tray_output *|primary
 	position top
 }
