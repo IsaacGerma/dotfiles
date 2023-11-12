@@ -33,6 +33,10 @@ interval=10
 signal=10
 markup=pango
 
+[mullvad]
+command=[[ -f /usr/bin/mullvad ]] && mullvad status
+interval=10
+
 [battery]
 command=[[ -d /sys/class/power_supply/BAT0/ ]] && printf "BAT0:%b%% %.3s\n" $(cat /sys/class/power_supply/BAT0/capacity) $(cat /sys/class/power_supply/BAT0/status)
 interval=10
@@ -45,4 +49,3 @@ signal=10
 [time]
 command=date '+%a %Y-%m-%d %H:%M:%S'
 interval=1
-
