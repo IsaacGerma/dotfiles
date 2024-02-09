@@ -71,7 +71,7 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 #bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-bindsym $mod+d exec --no-startup-id "rofi -modes combi -show combi -combi-modes run,drun"
+bindsym $mod+d exec --no-startup-id "rofi -modes combi -show combi -combi-modes run,drun -show-icons"
 
 # change focus
 bindsym $mod+$left		focus left
@@ -112,7 +112,7 @@ bindsym $mod+w			layout tabbed
 bindsym $mod+e			layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+Space	floating toggle
+bindsym $mod+shift+space	floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space		focus mode_toggle
@@ -242,8 +242,8 @@ bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock || swaylock
 bindsym $mod+Mod1+c		exec --no-startup-id i3-sensible-terminal -e calcurse
 
 # Screenshot
-bindsym --release Print		exec --no-startup-id maimfull
-bindsym shift+Print		exec --no-startup-id maimpick
+#bindsym --release Print		exec --no-startup-id maimfull
+#bindsym shift+Print		exec --no-startup-id maimpick
 
 # open todo list with vit
 bindsym $mod+shift+t		exec --no-startup-id i3-sensible-terminal -e vit
@@ -258,8 +258,8 @@ include ~/.config/i3/config.d/theme
 gaps inner 30
 gaps outer 00
 
-for_window [app_id="Alacritty"] opacity set 0.9
-for_window [app_id="Alacritty"] dim_inactive 0.2
+#for_window [app_id="Alacritty"] opacity set 0.9
+#for_window [app_id="Alacritty"] dim_inactive 0.2
 
 #blur enable
 #blur_xray enable

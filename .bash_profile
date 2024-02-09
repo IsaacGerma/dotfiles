@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH=$PATH:~/.local/bin:~/.local/share/cargo/bin
+export PATH=$PATH:~/.local/bin:~/.local/share/cargo/bin:/var/lib/flatpak/exports/share/applications/
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

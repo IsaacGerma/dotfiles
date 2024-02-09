@@ -22,16 +22,16 @@ command=~/.local/bin/statusbar/$BLOCK_NAME
 #command=echo "Hello, $USER!"
 #interval=once
 
-[sb-volume]
-#command=printf "Vol:%b\n" $(pamixer --get-volume-human)
-interval=10
-signal=10
-
 # Thank you, tatsumoto
 [sb-music]
 interval=10
 signal=10
 markup=pango
+
+[sb-volume]
+#command=printf "Vol:%b\n" $(pamixer --get-volume-human)
+interval=10
+signal=10
 
 [mullvad]
 command=[[ -f /usr/bin/mullvad ]] && mullvad status
