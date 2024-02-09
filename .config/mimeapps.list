@@ -1,12 +1,10 @@
 [Added Associations]
-text/x-c++src=code-oss.desktop;
-inode/directory=code-oss.desktop;
 
 [Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+inode/directory=pcmanfm.desktop;
 text/html=librewolf.desktop
-x-scheme-handler/http=librewolf.desktop
-x-scheme-handler/https=librewolf.desktop
 x-scheme-handler/about=librewolf.desktop
-x-scheme-handler/unknown=librewolf.desktop
-application/pdf=librewolf.desktop
-inode/directory=pcmanfm.desktop
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
+x-scheme-handler/ror2mm=r2modman.desktop
