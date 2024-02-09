@@ -26,6 +26,6 @@ case $choice in
 		systemctl reboot || loginctl reboot
 		;;
 	"Shutdown")
-		systemctl reboot || loginctl poweroff
+		systemctl poweroff || loginctl poweroff
 		;;
 esac
