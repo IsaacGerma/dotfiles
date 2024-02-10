@@ -1,7 +1,11 @@
 #!/bin/sh
 
 [[ -d /sys/class/power_supply/BAT0/ ]] &&
-printf "BAT0:%b%% %b\n" \
+	FULL=$(cat /sys/class/power_supply/BAT0/energy_full)
+	FULL_DESIGN=$(cat /sys/class/power_supply/BAT0/energy_full_design)
+	HEALTH=$(printf "%.0f%%" "$((10**6*$FULL/$FULL_DESIGN))e-4")
+	
+printf "BAT0:%b%% %b | Health:%b\n" \
 	$(cat /sys/class/power_supply/BAT0/capacity) \
-	$(cat /sys/class/power_supplyBAT0/status)
-
+	$(cat /sys/class/power_supply/BAT0/status) \
+	$(echo $HEALTH)

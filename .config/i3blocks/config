@@ -37,8 +37,8 @@ signal=10
 command=[[ -f /usr/bin/mullvad ]] && mullvad status
 interval=10
 
-[battery]
-command=[[ -d /sys/class/power_supply/BAT0/ ]] && printf "BAT0:%b%% %.3s\n" $(cat /sys/class/power_supply/BAT0/capacity) $(cat /sys/class/power_supply/BAT0/status)
+[sb-battery]
+#command=[[ -d /sys/class/power_supply/BAT0/ ]] && printf "BAT0:%b%% %.3s\n" $(cat /sys/class/power_supply/BAT0/capacity) $(cat /sys/class/power_supply/BAT0/status)
 interval=10
 
 [brightness]
