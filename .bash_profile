@@ -44,3 +44,7 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export DVDCSS_CACHE="$XDG_DATA_HOME"/dvdcss
 export RXVT_SOCKET="$XDG_RUNTIME_DIR"/urxvtd
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx
+fi
