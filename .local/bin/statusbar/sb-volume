@@ -1,6 +1,9 @@
 #!/bin/sh
 
-printf "Vol:%b\n" $(pamixer --get-volume-human)
+MUTED=""
+[[ $(pamixer --get-volume-human) == "muted" ]] && MUTED="(M)"
+
+printf "Vol:%b%% %b\n" $(pamixer --get-volume) $(echo $MUTED)
 
 case $BLOCK_BUTTON in
 4) # scroll up, increase volume
