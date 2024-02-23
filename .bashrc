@@ -20,6 +20,6 @@ alias sway='dbus-run-session sway'
 alias sx='startx $XINITRC'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
-alias bursync="rsync -avbP --suffix=.$(date +%Y%m%d%H%M%S) \
+alias bursync='rsync -avbP --suffix="."$(date +"%Y%m%d%H%M%S") \
 --exclude=.* \
-/home/$USER/ /run/media/$USER/Backups/Data/"
+/home/$USER/ /run/media/$USER/Backups/Data/'
