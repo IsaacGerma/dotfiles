@@ -11,8 +11,8 @@ fi
 
 SOURCE_DIR=~/.config/i3/themes
 DEST_FILE=~/.config/i3/config.d/theme
-CHOICE="$(find $SOURCE_DIR -type f | rofi -dmenu)"
+CHOICE="$(find $SOURCE_DIR -type f -printf "%f\n" | rofi -dmenu)"
 
+sed -i "s/\(set \$theme \).*/\1$CHOICE/g" ~/.config/i3/config.d/theme
 
-cat $CHOICE > $DEST_FILE
 i3-msg reload
