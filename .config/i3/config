@@ -57,8 +57,8 @@ bindsym XF86AudioMute 		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 
 bindsym XF86AudioMicMute	exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Backlight control
-bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 5
-bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 5 && $refresh_i3status
+bindsym XF86MonBrightnessDown	exec --no-startup-id xbacklight -dec 5 && $refresh_i3status
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -248,6 +248,9 @@ bindsym  Print	exec --no-startup-id flameshot gui
 
 # open todo list with vit
 bindsym $mod+shift+t		exec --no-startup-id i3-sensible-terminal -e vit
+
+# open ncmpcpp
+bindsym $mod+shift+m		exec --no-startup-id i3-sensible-terminal -e ncmpcpp
 
 ##################################
 ### Misc #########################
