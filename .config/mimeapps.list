@@ -1,4 +1,7 @@
 [Added Associations]
+application/x-trash=libreoffice-calc.desktop;
+application/json=code-oss.desktop;nvim.desktop;
+application/x-subrip=code-oss.desktop;aegisub.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
@@ -11,3 +14,4 @@ x-scheme-handler/ror2mm=r2modman.desktop
 video/x-matroska=mpv.desktop
 image/png=nsxiv.desktop
 image/jpeg=nsxiv.desktop
+x-scheme-handler/sidequest=SideQuest.desktop
