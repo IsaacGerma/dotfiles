@@ -21,5 +21,6 @@ alias sx='startx $XINITRC'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 alias bursync='rsync -avbP --suffix="."$(date +"%Y%m%d%H%M%S") \
+--exclude-from /home/$USER/buexclusions \
 --exclude=.* \
 /home/$USER/ /run/media/$USER/Backups/Data/'
