@@ -22,6 +22,9 @@ command=~/.local/bin/statusbar/$BLOCK_NAME
 #command=echo "Hello, $USER!"
 #interval=once
 
+[sb-datelog]
+interval=60
+
 # Thank you, tatsumoto
 [sb-music]
 interval=10

@@ -1,0 +1,5 @@
+#!/bin/sh
+date=`date '+%y-%m-%d'`
+hours=$((`cat ~/.time/"$date"`/60))
+minutes=$((`cat ~/.time/"$date"`%60))
+printf "Screentime: %bh %bm\n" $hours $minutes
