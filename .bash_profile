@@ -30,6 +30,7 @@ export XDG_CACHE_HOME="${XDG_CACHE_HOME}$HOME/.cache"
 # XDG-NINJA recommended environment variables
 
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
+export HISTSIZE=
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
