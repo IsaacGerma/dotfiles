@@ -1,13 +1,61 @@
-#!/bin/sh
+#!/bin/bash
 
-[[ -d /sys/class/power_supply/BAT0/ ]] && (
-	FULL=$(cat /sys/class/power_supply/BAT0/energy_full)
-	FULL_DESIGN=$(cat /sys/class/power_supply/BAT0/energy_full_design)
-	HEALTH=$(printf "%.0f%%" "$((10**6*$FULL/$FULL_DESIGN))e-4")
-	
-	printf "BAT0:%b%% %b | H:%b | C:%b\n" \
-	$(cat /sys/class/power_supply/BAT0/capacity) \
-	$(cat /sys/class/power_supply/BAT0/status | head -c 4) \
-	$(echo $HEALTH) \
-	$(cat /sys/class/power_supply/BAT0/cycle_count)
-)
+# Prints all batteries, their percentage remaining and an emoji corresponding
+# to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
+
+get_discharging_status() {
+	local -r battery=$1
+	local -r capacity=$(cat -- "$battery/capacity" 2>&1)
+	if ((capacity >= 90)); then
+		echo 
+	elif ((capacity >= 60)); then
+		echo 
+	elif ((capacity >= 40)); then
+		echo 
+	elif ((capacity >= 10)); then
+		echo 
+	elif ((capacity >= 0)); then
+		echo 
+	else
+		echo ERR
+	fi
+}
+
+get_status() {
+	local -r battery=$1
+	case $(cat -- "$battery/status" 2>&1) in
+	"Full") echo  ;;
+	"Charging") echo  ;;
+	"Not charging") echo  ;;
+	"Unknown") echo ♻️ ;;
+	"Discharging") get_discharging_status "$battery" ;;
+	*) echo ERR ;;
+	esac
+}
+
+screen_brightness() {
+	xbacklight -get | awk '{printf "%.1f",$0}'
+}
+
+case $BLOCK_BUTTON in
+1) notify-send "Screen brightness" "$(screen_brightness)%" &;;
+3) notify-send "Battery module" "🔋: discharging
+🛑: not charging
+♻: stagnant charge
+🔌: charging
+⚡: charged
+❗: battery very low!
+- Scroll to change adjust xbacklight." &;;
+4) xbacklight -inc 10 ;;
+5) xbacklight -dec 10 ;;
+6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+# Loop through all attached batteries and format the info
+for battery in /sys/class/power_supply/BAT?*; do
+	if [[ -d $battery ]]; then
+		printf -- '%s %d%% ' \
+			"$(get_status "$battery")" \
+			"$(cat -- "$battery/capacity" 2>&1)"
+	fi
+done | sed 's/ *$/\n/'
