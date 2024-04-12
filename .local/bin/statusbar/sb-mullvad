@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+
+case $BLOCK_BUTTON in
+	1) mullvad-vpn
+esac
+
+printf "Mullvad: %s\n" $(mullvad status | head -n1 | cut -d " " -f1)

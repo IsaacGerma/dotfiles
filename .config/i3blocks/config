@@ -36,8 +36,7 @@ markup=pango
 interval=10
 signal=10
 
-[mullvad]
-command=[[ -f /usr/bin/mullvad ]] && mullvad status
+[sb-mullvad]
 interval=10
 
 [sb-battery]
