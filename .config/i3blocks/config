@@ -45,7 +45,7 @@ interval=10
 
 [brightness]
 #command=[[ -f /usr/bin/light ]] && printf "Light:%.0f%%\n" $(light)
-command=[[ -f /usr/bin/xbacklight ]] && printf "Light: %.0f%%\n" $(xbacklight)
+command=[[ -f /usr/bin/xbacklight ]] && [[ xbacklight ]] || printf "Light: %.0f%%\n" $(xbacklight)
 interval=10
 signal=10
 
