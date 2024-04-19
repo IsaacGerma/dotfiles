@@ -1,7 +1,11 @@
 [Added Associations]
+<<<<<<< Updated upstream
 application/x-trash=libreoffice-calc.desktop;
 application/json=code-oss.desktop;nvim.desktop;
 application/x-subrip=code-oss.desktop;aegisub.desktop;
+=======
+application/vnd.microsoft.portable-executable=winetricks.desktop;
+>>>>>>> Stashed changes
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
@@ -14,4 +18,8 @@ x-scheme-handler/ror2mm=r2modman.desktop
 video/x-matroska=mpv.desktop
 image/png=nsxiv.desktop
 image/jpeg=nsxiv.desktop
+<<<<<<< Updated upstream
 x-scheme-handler/sidequest=SideQuest.desktop
+=======
+video/mp4=mpv.desktop
+>>>>>>> Stashed changes

@@ -208,6 +208,9 @@ bindsym $mod+Mod1+0		gaps inner all set 0
 # launch browser
 bindsym $mod+shift+w		exec --no-startup-id $browser
 
+# launch private browser
+bindsym $mod+shift+s		exec --no-startup-id $browser --private-window
+
 # launch lf
 bindsym $mod+shift+f		exec --no-startup-id i3-sensible-terminal -e lf
 
@@ -237,7 +240,7 @@ bindsym XF86AudioNext			exec --no-startup-id mpc next && $refresh_i3status
 #bindsym $mod+shift+y		exec --no-startup-id $browser moz-extension://a6d528c5-1491-4d44-bce3-7137df6a299b/search.html
 
 # the classic mod+tab for switching windows
-bindsym $mod+Tab		exec --no-startup-id rofi -show
+bindsym $mod+Tab		exec --no-startup-id rofi -show window
 
 # lock screen
 bindsym Mod1+L			exec --no-startup-id pamixer --mute & i3lock || swaylock
