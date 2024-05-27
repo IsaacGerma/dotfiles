@@ -15,3 +15,4 @@ video/x-matroska=mpv.desktop
 image/png=nsxiv.desktop
 image/jpeg=nsxiv.desktop
 x-scheme-handler/sidequest=SideQuest.desktop
+image/vnd.microsoft.icon=nsxiv.desktop
