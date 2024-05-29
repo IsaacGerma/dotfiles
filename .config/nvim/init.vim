@@ -11,7 +11,9 @@ call plug#begin()
 	"Plug 'valloric/youcompleteme'
 	"Plug 'jamessan/vim-gnupg'
 	Plug 'vimwiki/vimwiki'
-	Plug 'ying17zi/vim-live-latex-preview'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'donRaphaco/neotex', { 'for': 'tex' }
+	"Plug 'emakman/nvim-latex-previewer'
 
 call plug#end()
 

@@ -1,1 +1,2 @@
+-N 12
 --alias get-audio,-X "-x --prefer-free-formats -o '~/Music/yt-dlp/%(channel)s/%(upload_date)s - %(title).64s.%(ext)s"
