@@ -1,2 +1,3 @@
 -N 12
---alias get-audio,-X "-x --prefer-free-formats -o '~/Music/yt-dlp/%(channel)s/%(upload_date)s - %(title).64s.%(ext)s"
+--alias get-audio,-X "-x --prefer-free-formats -o '~/Music/yt-dlp/%(channel)s/%(upload_date)s - %(title).64s.%(ext)s'"
+--alias dl-channel "-o '~/Videos/yt-dlp/%(uploader)s/%(upload_date)s - %(title)s.%(ext)s' --embed-thumbnail --embed-metadata -f 'bv*[height=720]+ba'"
