@@ -24,3 +24,5 @@ alias bursync='rsync -avbP --suffix="."$(date +"%Y%m%d%H%M%S") \
 --exclude-from /home/$USER/buexclusions \
 /home/$USER/ /run/media/$USER/Backups/Data/'
 alias scron='sudo EDITOR=nvim crontab -e'
+
+alias sudo='doas'
