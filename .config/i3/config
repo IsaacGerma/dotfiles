@@ -1,3 +1,5 @@
+#include /etc/sway/config.d/*
+
 ##################################
 ### Definitions ##################
 ##################################
@@ -30,22 +32,27 @@ floating_modifier $mod
 ##################################
 ### AutoStart ####################
 ##################################
-
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-
 exec --no-startup-id mpd
+exec --no-startup-id swww-daemon
+exec --no-startup-id swww restore
+exec --no-startup-id searxng-run
 
-
+exec --no-startup-id export GTK_IM_MODULE=fcitx \
+export QT_IM_MODULE=fcitx \
+export XMODIFIERS=@im=fcitx \
+fcitx -dr
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+include config.d/autostart
 ##################################
 ### Bindings #####################
 ##################################
@@ -141,6 +148,18 @@ bindsym $mod+7			workspace number $ws7
 bindsym $mod+8			workspace number $ws8
 bindsym $mod+9			workspace number $ws9
 bindsym $mod+0			workspace number $ws10
+
+bindsym $mod+KP_End			workspace number $ws1
+bindsym $mod+KP_Down			workspace number $ws2
+bindsym $mod+KP_Next			workspace number $ws3
+bindsym $mod+KP_Left			workspace number $ws4
+bindsym $mod+KP_Begin			workspace number $ws5
+bindsym $mod+KP_Right			workspace number $ws6
+bindsym $mod+KP_Home			workspace number $ws7
+bindsym $mod+KP_Up			workspace number $ws8
+bindsym $mod+KP_Prior			workspace number $ws9
+bindsym $mod+KP_Insert			workspace number $ws10
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1		move container to workspace number $ws1
@@ -263,22 +282,53 @@ bindsym $mod+shift+m		exec --no-startup-id i3-sensible-terminal -e ncmpcpp
 ### Misc #########################
 ##################################
 
-exec --no-startup-id i3checkconfig
-include ~/.config/i3/config.d/theme
+output * adaptive_sync on
+
+####################################
+### Ricing #########################
+####################################
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
+set $lightgray #bdae93
+set $white #000000
+
+bar {
+    position bottom
+    #swaybar_command i3bar
+    status_command i3blocks 
+
+    #tray_bindcode 272 Activate
+    #tray_bindcode 273 ContextMenu
+    #icon_theme breeze
+    colors {
+        # bar background color
+        background $bg
+        # text color used for blocks that do not have a color specified.
+        statusline $lightgray
+        # workspaces section            
+        #                    border  backgr. text
+        focused_workspace    $lightgray $lightgray $bg
+        inactive_workspace   $darkgray $darkgray $lightgray
+        active_workspace     $darkgray $darkgray $lightgray
+        urgent_workspace     $red $red $bg
+    }
+}
+
+# class                 border|backgr|text|indicator|child_border
+client.focused          $lightgray $lightgray $bg $purple $darkgray
+client.focused_inactive $darkgray $darkgray $lightgray $purple $darkgray
+client.unfocused        $darkgray $darkgray $lightgray $purple $darkgray
+client.urgent           $red $red $white $red $red
 
 gaps inner 30
 gaps outer 00
-
-#for_window [app_id="Alacritty"] opacity set 0.9
-#for_window [app_id="Alacritty"] dim_inactive 0.2
-
-#blur enable
-#blur_xray enable
-#blur_passes 0
-#blur_radius 0
-
-
-
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
