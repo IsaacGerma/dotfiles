@@ -1,0 +1,3 @@
+preview image image/* {{
+	chafa -f sixel -s "$(($w-2))x$h" --animate off --polite on "$f"
+}}
