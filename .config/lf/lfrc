@@ -8,6 +8,7 @@ set preview true
 set hidden false
 set drawbox true
 
+set sixel true
 
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
