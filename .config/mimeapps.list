@@ -17,3 +17,4 @@ image/png=nsxiv.desktop
 image/jpeg=nsxiv.desktop
 x-scheme-handler/sidequest=SideQuest.desktop
 video/mp4=mpv.desktop
+video/webm=mpv.desktop
