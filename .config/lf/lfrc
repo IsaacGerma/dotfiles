@@ -10,6 +10,8 @@ set drawbox true
 
 set sixel true
 
+map m !setsid -f mpv --terminal=no "$f"
+
 cmd open ${{
 	case $(file --mime-type "$f" -bL) in
 	text/*) $EDITOR "$f";;
