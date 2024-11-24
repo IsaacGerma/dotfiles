@@ -20,7 +20,7 @@ case $choice in
 	"Cancel")
 		;;
 	"Exit i3")
-		i3-msg exit
+		i3-msg exit || swaymsg exit
 		;;
 	"Reboot")
 		systemctl reboot || loginctl reboot
