@@ -18,7 +18,7 @@ export QT_QPA_PLATFORM=wayland
 #export MOZ_ENABLE_WAYLAND=1
 
 export EDITOR=nvim
-export TERMINAL=alacritty
+export TERMINAL=footclient
 
 if which librewolf >/dev/null; then
 	export BROWSER=librewolf

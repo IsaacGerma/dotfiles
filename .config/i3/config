@@ -45,6 +45,7 @@ exec --no-startup-id mpd
 exec --no-startup-id swww-daemon
 exec --no-startup-id swww restore
 exec --no-startup-id searxng-run
+exec --no-startup-id foot --server
 
 exec --no-startup-id export GTK_IM_MODULE=fcitx \
 export QT_IM_MODULE=fcitx \
